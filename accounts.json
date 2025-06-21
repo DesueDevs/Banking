@@ -1,0 +1,14 @@
+[
+    {
+        "firstName": "Samuel",
+        "lastName": "Smith",
+        "email": "SamuelSmith@gmail.com",
+        "encryptedPassword": "5e884898da28047151d0e56f8dc6292773603d0d4c2f1b6c7a8b9f1c2b3a4d5e",
+        "accounts": [
+            {
+                "accountNumber": "123456789",
+                "balance": 1000.00
+            }
+        ]
+    }
+]
