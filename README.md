@@ -7,4 +7,4 @@ I am developing this banking web app that showcases my personal comprehension of
 
 ### Update Timeline
 - [6/20/25] Logging, hashing, basic account creation/management functions without any gui - 
-- [6/22/25] Implemented basic salting when storing passwords by adding the first 5 characters of the user's email before being hashed, and added a check to ensure the user has access to the requested account number.
+- [6/22/25] Implemented basic salting when storing passwords by adding the first 5 characters of the user's email before being hashed, and added a check to ensure the user has access to the requested account number in the withdrawal.
