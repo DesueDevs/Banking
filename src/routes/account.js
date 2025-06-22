@@ -62,6 +62,11 @@ router.post('/withdraw', authenticateJWT, (req, res) => {
         Logging('withdrawal', 'warn', `Withdrawal attempt for non-existing account with token: ${sso}`, req.ip, 'failure');
         return res.status(404).json({ error: 'Account not found' });
     }
+    const foundAccountNum = Array.isArray(account.accounts) && account.accounts.some(element => element.accountNum === accountNum);
+    if (!foundAccountNum) {
+        Logging('deposit', 'warn', `Deposit attempt for account number ${accountNum} which does not belong to the account with email: ${account.email}`, req.ip, 'failure');
+        return res.status(403).json({ error: 'Account number does not belong to this account' });
+    }
     if (typeof amount !== 'number' || amount <= 0) {
         Logging('withdrawal', 'error', `Invalid withdrawal amount: ${amount}`, req.ip, 'failure');
         return res.status(400).json({ error: 'Invalid withdrawal amount' });

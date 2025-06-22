@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const accountsFile = path.join(__dirname, '../data/accounts.json');
+const accountsFile = path.join(__dirname, './accounts.json');
 
 let accounts = [];
 let tokenData = [];

@@ -45,7 +45,7 @@ router.get('/login', (req, res) => {
         Logging('accountLogin', 'error', 'Email and password are required for login', req.ip, 'failure');
         return res.status(400).json({ error: 'Email and password are required' });
     }
-    const encryptedPassword = crypto.createHash('sha256').update(password).digest('hex');
+    const encryptedPassword = crypto.createHash('sha256').update(password + email.substring(0,5)).digest('hex');
     const account = db.findAccountByEmailAndPassword(encryptedPassword);
 
     if (!account) {
