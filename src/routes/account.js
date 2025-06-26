@@ -79,3 +79,5 @@ router.post('/withdraw', authenticateJWT, (req, res) => {
     Logging('withdrawal', 'info', `Withdrawal of ${amount} successful for account with email: ${account.email}`, req.ip, 'success');
     res.json({ message: 'Withdrawal successful', balance: account.balance });
 });
+
+module.exports = router;

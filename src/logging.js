@@ -23,31 +23,31 @@ function Logging(logType, logLevel, message, sourceIP, resultStatus, additionalD
     switch (logType) {
         case 'accountLogin':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/login.log');
-            console.info(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.info(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         case 'accountCreation':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/creation.log');
-            console.info(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.info(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         case 'withdrawal':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/withdrawals.log');
-            console.warn(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.warn(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         case 'deposit':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/deposits.log');
-            console.warn(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.warn(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         case 'authentication':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/authentication.log');
-            console.info(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.info(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         case 'general':
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/general.log');
-            console.info(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.info(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
             break;
         default:
             writeLogToFile(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, 'logs/defaultErrors.log');
-            console.log(`[${new Date().toISOString()}] [${logLeveal}] [${sourceIP}] ${message}`, additionalData);
+            console.log(`[${new Date().toISOString()}] [${logLevel}] [${sourceIP}] ${message}`, additionalData);
     }
 }
 
